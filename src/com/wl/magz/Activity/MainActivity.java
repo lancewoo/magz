@@ -1,7 +1,7 @@
 package com.wl.magz.activity;
 
 import com.wl.magz.R;
-import com.wl.magz.service.MgzDownloadService;
+import com.wl.magz.service.DownloadService;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
     }
 
     private void startDownloadService() {
-        Intent service = new Intent(this, MgzDownloadService.class);
+        Intent service = new Intent(this, DownloadService.class);
         startService(service);
     }
 
@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
             }
 
             private void startActivity() {
-                Intent i = new Intent(MainActivity.this, BookShelfActivity.class);
+                Intent i = new Intent(MainActivity.this, BookshelfActivity.class);
                 MainActivity.this.startActivity(i);
                 MainActivity.this.finish();
             }
